@@ -47,7 +47,7 @@ document
                 const { error } = await supabase
                 .from('data')
                 .update({ catalogue: jsonObject })
-                .eq('id', 1)
+                .eq('id', 2)
                 if (error) return alert('Ha ocurrido un error al cargar la data.')
                 alert('Datos cargados correctamente.')
                 location.href = 'https://libreriacantomortal.vercel.app/';
