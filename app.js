@@ -50,8 +50,8 @@ document
             }
           })
           console.log(filterData)
-          return console.log(rowObject)
-          let jsonObject = JSON.stringify(rowObject, null, 2);
+          console.log(rowObject)
+          let jsonObject = JSON.stringify(filterData, null, 2);
           console.log(jsonObject)
           const { data, error } = await supabase
             .from('data')
