@@ -38,6 +38,19 @@ document
           let rowObject = XLSX.utils.sheet_to_row_object_array(
             workbook.Sheets[sheet]
           );
+          const filterData = []
+          rowObject.map(item => {
+            if (item.NombreLibro) {
+              filterData.push({
+                NombreLibro: item.NombreLibro,
+                Precio: item.Precio,
+                Autor: item.Autor,
+                Imagen: item.Imagen
+              })
+            }
+          })
+          console.log(filterData)
+          return console.log(rowObject)
           let jsonObject = JSON.stringify(rowObject, null, 2);
           console.log(jsonObject)
           const { data, error } = await supabase
