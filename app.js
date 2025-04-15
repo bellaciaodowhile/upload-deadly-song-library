@@ -45,7 +45,8 @@ document
                 NombreLibro: item.NombreLibro,
                 Precio: item.Precio,
                 Autor: item.Autor,
-                Imagen: item.Imagen
+                Imagen: item.Imagen,
+                Destacado: item.Destacado || 'NO'
               })
             }
           })
